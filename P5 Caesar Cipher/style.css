@@ -1,0 +1,93 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #222, #444);
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.container {
+  background-color: #333;
+  padding: 2rem;
+  border-radius: 1rem;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 0.5rem;
+  color: #ffd700;
+}
+
+.instructions {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-bottom: 1.5rem;
+}
+
+textarea {
+  width: 100%;
+  height: 100px;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  resize: none;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+input[type="number"] {
+  width: 60px;
+  padding: 0.3rem;
+  border-radius: 0.3rem;
+  border: none;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+button {
+  flex: 1;
+  background-color: #ffd700;
+  color: #333;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #e6c200;
+}
+
+.result {
+  min-height: 40px;
+  background-color: #222;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  color: #00ffcc;
+  font-weight: bold;
+  word-wrap: break-word;
+}

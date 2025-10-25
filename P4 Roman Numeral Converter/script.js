@@ -18,7 +18,7 @@ const romanNumerals = [
     {value: 1, symbol:"I"}
 ];
 
-function romanConverter () {
+function romanConverter() {
     let inputVal = input.value;
 
     if (inputVal > 3999 || inputVal < 1) {
