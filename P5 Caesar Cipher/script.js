@@ -11,24 +11,35 @@ function encrypt() {
         result.innerText = "Please enter a message.";
         return;
     }
-        
-    function isLetter(char) {
-        const cleaned = char.replace(/[^a-zA-Z\s]/g, '');
-        return cleaned;
-    }
 
     result.innerText = "";
 
     for (let i = 0; i < mVal.length; i++) { 
-        if (isLetter(mVal[i])) {
-            let shift = mVal.charCodeAt(i) + Number(shiftInput.value);
-            result.innerText += String.fromCharCode(shift); 
+            let curr = mVal.charCodeAt(i);
+            let shift;
+
+        if (curr >= 65 && curr <= 90) {
+            curr -= 65
+            shift = curr + Number(shiftInput.value);
+            let upperC = shift % 26;
+            normalized = upperC + 65;
+            result.innerText += String.fromCharCode(normalized);
+        } else if (curr >= 97 && curr <= 122) {
+            curr -= 97;
+            shift = curr + Number(shiftInput.value);
+            let lowerC = shift % 26;
+            normalized = lowerC + 97;
+            result.innerText += String.fromCharCode(normalized);
+        } else {
+            result.innerText += mVal[i];
         }
     }
 }
 
 function decrypt() {
-
+    if (encrypt) {
+        console.log("yessur")
+    }
 }
 
 //Encrypt
@@ -47,5 +58,4 @@ encryptBtn.addEventListener("keydown", function(event) {
     }
 });
 
-console.log("z".charCodeAt())
 

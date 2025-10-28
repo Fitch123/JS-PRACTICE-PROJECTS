@@ -91,3 +91,7 @@ button:hover {
   font-weight: bold;
   word-wrap: break-word;
 }
+
+#result {
+  white-space: pre-wrap;
+}
