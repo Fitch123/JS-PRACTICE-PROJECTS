@@ -41,8 +41,6 @@ function checker() {
     }
 }
 
-let changeDue = cash.value - price.value;
-
 function checkCashRegister(price, cash, cid) {
     let changeDue = cash - price;
 
@@ -55,7 +53,13 @@ function checkCashRegister(price, cash, cid) {
         for (let i = cashRegister.cid.length - 1; i >= 0; i--) {
             let denomName = cashRegister.cid[i][0];
             let denomAmount = cashRegister.cid[i][1];
-            
+            let denomValue = denominationValues[denomName];
+            let changeGiven = 0;
+            while (changeDue >= denomValue) {
+                changeDue -= denomValue;
+                denomAmount -= denomValue;
+                changeGiven += denomValue;
+            }
         }
     }
 }
@@ -76,12 +80,4 @@ document.addEventListener("keydown", function(event) {
     }
 });
 
-
-// TEST
-for (let i = cashRegister.cid.length - 1; i >= 0; i--) {
-    let price = 10;
-    let cash = 20;    
-    let changeDue = cash - price;
-    let denomName = cashRegister.cid[i][0];
-    let denomAmount = cashRegister.cid[i][1];
-}
+//console.log(denominationValues["PENNY"]);
