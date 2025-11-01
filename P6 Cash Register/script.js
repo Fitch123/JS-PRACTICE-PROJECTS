@@ -74,7 +74,7 @@ function checkCashRegister(price, cash, cid) {
 
             //UPDATES THE denomAmount TO NEW AMOUNT AFTER WHILE LOOP
             denomAmount = Math.round(denomAmount * 100) / 100;
-            cashRegister.cid[i][1] = denomAmount;
+            cid[i][1] = denomAmount;
         }
 
         changeDue = Math.round(changeDue * 100) / 100;
